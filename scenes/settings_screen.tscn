@@ -1,0 +1,187 @@
+[gd_scene load_steps=13 format=3 uid="uid://b1snho4e70eva"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_qrqa7"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_pt01f"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="3_n20dh"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="3_pt01f"]
+[ext_resource type="Script" uid="uid://nwvmmmm4rg3c" path="res://scripts/h_slider.gd" id="5_n20dh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q1qo"]
+bg_color = Color(0, 0.290196, 0.678431, 0.341176)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Theme" id="Theme_t5s44"]
+Label/constants/outline_size = 0
+Label/font_sizes/font_size = 40
+
+[sub_resource type="Theme" id="Theme_hbblf"]
+Label/font_sizes/font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k6ht"]
+bg_color = Color(1, 0.87451, 0.384314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huheb"]
+bg_color = Color(1, 0.87451, 0.384314, 1)
+
+[sub_resource type="Theme" id="Theme_netge"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_2k6ht")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_huheb")
+
+[sub_resource type="Theme" id="Theme_l42ic"]
+Label/constants/outline_size = 19
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qrqa7")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_pt01f")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_pt01f")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -672.0
+offset_top = -328.0
+offset_right = 148.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.575, 1.575)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q1qo")
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = 19.5
+offset_right = -28.0
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t5s44")
+theme_override_fonts/font = ExtResource("3_n20dh")
+text = "Music Volume"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="version" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_right = 125.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme = SubResource("Theme_hbblf")
+theme_override_fonts/font = ExtResource("3_n20dh")
+text = "AUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="sfx" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -108.5
+offset_right = -46.0
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t5s44")
+theme_override_fonts/font = ExtResource("3_n20dh")
+text = "SFX Volume"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 167.0
+offset_right = 609.0
+offset_bottom = 208.0
+scale = Vector2(1.3, 1.3)
+theme = SubResource("Theme_netge")
+max_value = 1.0
+step = 0.001
+script = ExtResource("5_n20dh")
+bus_name = "sfx"
+
+[node name="HSlider2" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 300.23
+offset_right = 607.0
+offset_bottom = 341.23
+scale = Vector2(1.3, 1.3)
+theme = SubResource("Theme_netge")
+max_value = 1.0
+step = 0.001
+script = ExtResource("5_n20dh")
+bus_name = "music"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.5
+offset_right = 254.5
+offset_bottom = 155.0
+grow_horizontal = 2
+theme = SubResource("Theme_l42ic")
+theme_override_fonts/font = ExtResource("3_n20dh")
+theme_override_font_sizes/font_size = 102
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_back_button_pressed"]

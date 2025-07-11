@@ -1,0 +1,341 @@
+[gd_scene load_steps=12 format=3 uid="uid://blxbi70pcerwy"]
+
+[ext_resource type="Script" uid="uid://u4l6i82da5ui" path="res://scripts/continue_script.gd" id="1_tuk4f"]
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="2_exv5t"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="3_b5o3q"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="4_a6j3u"]
+
+[sub_resource type="Theme" id="Theme_x0ti1"]
+Label/constants/outline_size = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jilq"]
+bg_color = Color(0, 0.290196, 0.678431, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+shadow_color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="Theme" id="Theme_v4gmu"]
+Label/font_sizes/font_size = 23
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jotto"]
+bg_color = Color(1, 0.776471, 0.0823529, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt7kx"]
+bg_color = Color(0.746803, 0.574233, 1.34766e-06, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7opvp"]
+bg_color = Color(1, 0.898436, 0.665899, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_028fr"]
+bg_color = Color(1, 0.776471, 0.0823529, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[node name="ContinueScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tuk4f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_exv5t")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("3_b5o3q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_right = 265.0
+offset_bottom = 167.0
+grow_horizontal = 2
+theme = SubResource("Theme_x0ti1")
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 110
+text = "Profile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.423984
+anchor_top = 0.425926
+anchor_right = 0.423984
+anchor_bottom = 0.425926
+offset_left = -456.0
+offset_top = -239.0
+offset_right = 576.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.24, 1.24)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jilq")
+metadata/_edit_use_anchors_ = true
+
+[node name="profile" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -202.5
+offset_right = -308.0
+offset_bottom = -37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jilq")
+
+[node name="label" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.0
+offset_top = 29.0
+offset_right = -55.0
+offset_bottom = 105.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 50
+text = "Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="label2" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = 28.0
+offset_right = 201.0
+offset_bottom = 104.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 50
+text = "Progress"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="label3" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 207.0
+offset_top = 29.0
+offset_right = 443.0
+offset_bottom = 105.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 50
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="username" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.0
+offset_top = 94.0
+offset_right = -55.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 39
+text = "username"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="progress" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 93.0
+offset_right = 205.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 39
+text = "progress"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="score" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 211.0
+offset_top = 94.0
+offset_right = 447.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme = SubResource("Theme_v4gmu")
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 39
+text = "score"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="lessonVid_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 222.0
+offset_right = 337.0
+offset_bottom = 315.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_jotto")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qt7kx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7opvp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_028fr")
+text = "Lesson Video"
+
+[node name="collection_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 334.0
+offset_right = 336.0
+offset_bottom = 427.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_jotto")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qt7kx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7opvp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_028fr")
+text = "Collections"
+
+[node name="collection_button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 334.0
+offset_right = 984.0
+offset_bottom = 427.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_a6j3u")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_jotto")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qt7kx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7opvp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_028fr")
+text = "Resume
+"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Panel/lessonVid_button" to="." method="_on_lesson_video_button_pressed"]
+[connection signal="pressed" from="Panel/collection_button" to="." method="_on_collection_button_pressed"]

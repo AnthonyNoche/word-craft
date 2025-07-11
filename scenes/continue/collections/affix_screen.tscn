@@ -1,0 +1,331 @@
+[gd_scene load_steps=13 format=3 uid="uid://b2i8imvuf0i3u"]
+
+[ext_resource type="Script" uid="uid://d3a1sjkcsx2w" path="res://scripts/affix_script.gd" id="1_qgxwp"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="1_wn7yp"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_qgxwp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh715"]
+bg_color = Color(0, 0.290196, 0.678431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsxk0"]
+bg_color = Color(0.6, 0.67451, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgxwp"]
+bg_color = Color(0.890196, 0.909804, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2s7q"]
+bg_color = Color(0, 0.321569, 0.8, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a830l"]
+bg_color = Color(0.826304, 0.740348, 0.0238093, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tu35"]
+bg_color = Color(0.615919, 0.550575, 0.0151985, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1pk1"]
+bg_color = Color(0.939166, 0.842996, 0.0677563, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_qgxwp"]
+Button/constants/outline_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seyst"]
+bg_color = Color(0.0130305, 0.45632, 0.721908, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+anti_aliasing_size = 0.01
+
+[node name="AffixScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgxwp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh715")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_right = 252.0
+offset_bottom = 96.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 90
+text = "Created Word Using Affix"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_qgxwp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -400.0
+offset_right = 620.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lsxk0")
+text = "Prefix"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lsxk0")
+text = "Root word"
+
+[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lsxk0")
+text = "Suffix"
+
+[node name="Button6" type="Button" parent="VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lsxk0")
+text = "New Word"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgxwp")
+text = "trans-"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgxwp")
+text = "form"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgxwp")
+text = "-able"
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgxwp")
+text = "transformable"
+
+[node name="DefinitionPopup" type="PopupPanel" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(1225, 750)
+theme_override_styles/panel = SubResource("StyleBoxFlat_l2s7q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DefinitionPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1221.0
+offset_bottom = 746.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WordLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 100
+text = "word"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefinitionLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 50
+text = "definition"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 169
+
+[node name="CloseButton" type="Button" parent="DefinitionPopup/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_a830l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1tu35")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t1pk1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a830l")
+text = "         Close        "
+
+[node name="LeftButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0227642
+anchor_top = 0.466667
+anchor_right = 0.0227642
+anchor_bottom = 0.467
+offset_left = 264.0
+offset_top = -28.0003
+offset_right = 337.0
+offset_bottom = 50.6396
+grow_vertical = 2
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_qgxwp")
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/hover = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seyst")
+text = "<"
+
+[node name="RightButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.951403
+anchor_top = 0.44347
+anchor_right = 0.951403
+anchor_bottom = 0.44347
+offset_left = -228.451
+offset_top = 137.052
+offset_right = -155.451
+offset_bottom = 216.053
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.14126
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_qgxwp")
+theme_override_fonts/font = ExtResource("1_wn7yp")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/hover = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_seyst")
+theme_override_styles/normal = SubResource("StyleBoxFlat_seyst")
+text = "<
+"
+
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

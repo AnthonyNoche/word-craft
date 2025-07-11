@@ -1,0 +1,213 @@
+[gd_scene load_steps=14 format=3 uid="uid://c3ug5rdx5xjg6"]
+
+[ext_resource type="Script" uid="uid://baxo0dlsjsrma" path="res://scripts/new_game_script.gd" id="1_225m7"]
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_tb7ev"]
+[ext_resource type="Texture2D" uid="uid://k5lemwdxv7oe" path="res://images/noah.png" id="2_rxo0p"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="3_5juc6"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="5_462kq"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="6_bxpk2"]
+
+[sub_resource type="Theme" id="Theme_225m7"]
+Button/constants/outline_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_462kq"]
+bg_color = Color(0.0130305, 0.45632, 0.721908, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 13
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxpk2"]
+bg_color = Color(0.988235, 0.890196, 0.14902, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="Theme" id="Theme_4mnxp"]
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 44
+Button/fonts/font = ExtResource("3_5juc6")
+Button/styles/normal = SubResource("StyleBoxFlat_bxpk2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3bfx"]
+bg_color = Color(1, 0.835786, 0.433428, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtuxj"]
+bg_color = Color(0.540857, 0.482859, 0.0123638, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f80k"]
+bg_color = Color(0.859143, 0.770025, 0.0278839, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="NewGameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_225m7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tb7ev")
+
+[node name="LeftButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 576.0
+offset_top = -52.0
+offset_right = 649.0
+offset_bottom = 27.0
+grow_vertical = 2
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_225m7")
+theme_override_fonts/font = ExtResource("3_5juc6")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_462kq")
+text = "<"
+
+[node name="RightButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = 80.0
+offset_right = -483.0
+offset_bottom = 159.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.14126
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_225m7")
+theme_override_fonts/font = ExtResource("3_5juc6")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_462kq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_462kq")
+text = "<
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -192.0
+offset_right = 191.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.925, 0.925)
+theme = SubResource("Theme_4mnxp")
+theme_override_constants/outline_size = 19
+theme_override_font_sizes/font_size = 91
+theme_override_styles/focus = SubResource("StyleBoxFlat_s3bfx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gtuxj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s3bfx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5f80k")
+text = "Select"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("5_462kq")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_bxpk2")
+
+[node name="CharacterName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.0
+offset_right = 144.0
+offset_bottom = 225.0
+grow_horizontal = 2
+scale = Vector2(0.925, 0.925)
+theme_override_constants/outline_size = 17
+theme_override_fonts/font = ExtResource("3_5juc6")
+theme_override_font_sizes/font_size = 120
+text = "Noah"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacterDisplay" type="TextureRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = -366.0
+offset_right = 279.0
+offset_bottom = 366.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rxo0p")
+expand_mode = 1
+
+[connection signal="pressed" from="LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_RightButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_select_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_back_button_pressed"]

@@ -1,0 +1,383 @@
+[gd_scene load_steps=15 format=3 uid="uid://kr70arb7sfdb"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_vjkpg"]
+[ext_resource type="Script" uid="uid://da8ashdhn3ri4" path="res://scripts/leader_borads_scipt.gd" id="1_vqfdo"]
+[ext_resource type="Texture2D" uid="uid://jn2cflrhdr1v" path="res://images/ribon.png" id="2_ldjks"]
+[ext_resource type="Texture2D" uid="uid://lda25faxtcuq" path="res://images/1st.png" id="3_pgyf6"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="4_stuqh"]
+[ext_resource type="Texture2D" uid="uid://bpohdvl6ldomg" path="res://images/2nd.png" id="5_vqfdo"]
+[ext_resource type="Texture2D" uid="uid://boghk0o0lxn8o" path="res://images/3rd.png" id="6_4yq5b"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="8_4yq5b"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="9_twryt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py3wy"]
+bg_color = Color(0, 0.290196, 0.678431, 0.662745)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_twryt"]
+Label/constants/outline_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpdje"]
+bg_color = Color(0, 0.290196, 0.678431, 0.286275)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_py3wy"]
+Panel/styles/panel = SubResource("StyleBoxFlat_kpdje")
+
+[sub_resource type="Theme" id="Theme_kpdje"]
+Label/constants/outline_size = 15
+
+[node name="LeaderBoradsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqfdo")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vjkpg")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -581.5
+offset_top = -145.165
+offset_right = 581.5
+offset_bottom = -29.165
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_py3wy")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -36.0
+offset_right = 147.0
+offset_bottom = 37.0
+grow_vertical = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Rank:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="rank" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 134.5
+offset_top = -35.61
+offset_right = 281.5
+offset_bottom = 37.39
+grow_vertical = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -73.5
+offset_top = -91.955
+offset_right = 73.5
+offset_bottom = -18.955
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Rank"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 832.0
+offset_top = -36.0
+offset_right = 979.0
+offset_bottom = 37.0
+grow_vertical = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 966.5
+offset_top = -35.61
+offset_right = 1113.5
+offset_bottom = 37.39
+grow_vertical = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1st" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -36.5
+offset_right = 87.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.255, 1.255)
+
+[node name="1St" type="Sprite2D" parent="1st"]
+position = Vector2(81.9699, -71.815)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("3_pgyf6")
+
+[node name="Label" type="Label" parent="1st"]
+layout_mode = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="1st/Label"]
+layout_mode = 0
+offset_left = -13.505
+offset_top = 64.0
+offset_right = 190.495
+offset_bottom = 117.0
+theme = SubResource("Theme_py3wy")
+
+[node name="score2" type="Label" parent="1st/Label"]
+layout_mode = 0
+offset_left = 76.495
+offset_top = 71.0
+offset_right = 178.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "1stScore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="1st/Label"]
+layout_mode = 0
+offset_left = -1.505
+offset_top = 71.0
+offset_right = 70.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2nd" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 432.0
+offset_top = 47.0
+offset_right = 606.0
+offset_bottom = 120.0
+grow_vertical = 2
+scale = Vector2(1.255, 1.255)
+
+[node name="2Nd" type="Sprite2D" parent="2nd"]
+position = Vector2(79.465, -59.815)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("5_vqfdo")
+
+[node name="Label" type="Label" parent="2nd"]
+layout_mode = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Player 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="2nd/Label"]
+layout_mode = 2
+offset_left = -13.505
+offset_top = 64.0
+offset_right = 190.495
+offset_bottom = 117.0
+theme = SubResource("Theme_py3wy")
+
+[node name="score2" type="Label" parent="2nd/Label"]
+layout_mode = 0
+offset_left = 76.495
+offset_top = 71.0
+offset_right = 178.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "2ndScore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="2nd/Label"]
+layout_mode = 0
+offset_left = -1.505
+offset_top = 71.0
+offset_right = 70.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3rd" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -652.0
+offset_top = 52.0
+offset_right = -478.0
+offset_bottom = 201.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.255, 1.255)
+
+[node name="3Rd" type="Sprite2D" parent="3rd"]
+position = Vector2(78.9699, -62.815)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("6_4yq5b")
+
+[node name="Label" type="Label" parent="3rd"]
+layout_mode = 2
+theme = SubResource("Theme_twryt")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 48
+text = "Player 3
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="3rd/Label"]
+layout_mode = 0
+offset_left = -13.505
+offset_top = 64.0
+offset_right = 190.495
+offset_bottom = 117.0
+theme = SubResource("Theme_py3wy")
+
+[node name="score2" type="Label" parent="3rd/Label"]
+layout_mode = 0
+offset_left = 76.495
+offset_top = 71.0
+offset_right = 178.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "3rdScore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="3rd/Label"]
+layout_mode = 0
+offset_left = -1.505
+offset_top = 71.0
+offset_right = 70.495
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 24
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("8_4yq5b")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_twryt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_right = 546.0
+offset_bottom = 338.0
+grow_horizontal = 2
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("2_ldjks")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -125.0
+offset_right = 242.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_kpdje")
+theme_override_fonts/font = ExtResource("4_stuqh")
+theme_override_font_sizes/font_size = 71
+text = "LEADERBOARD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_back_button_pressed"]

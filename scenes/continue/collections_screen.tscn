@@ -1,0 +1,435 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqaqkchvaiua2"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_1e8kn"]
+[ext_resource type="Script" uid="uid://cc1wu2lf2wl08" path="res://scripts/collections_script.gd" id="1_l0t1v"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_l0t1v"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="3_r4i0i"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="4_16hih"]
+[ext_resource type="Texture2D" uid="uid://b5equ8n5t6ckq" path="res://images/open-book-icon.png" id="5_jh8mb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlg6h"]
+bg_color = Color(0, 0.290196, 0.678431, 0.596078)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1sri"]
+bg_color = Color(0.915568, 0.769851, 5.0056e-06, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51tah"]
+bg_color = Color(0.652262, 0.546076, 7.70092e-07, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqx5s"]
+bg_color = Color(1, 0.903011, 0.531609, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl7oe"]
+bg_color = Color(0.842283, 0.707569, 1.92523e-06, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="LessonVideoScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l0t1v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1e8kn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 281.0
+offset_right = 954.0
+offset_bottom = 463.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_l0t1v")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_r4i0i")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.0
+offset_right = 321.0
+offset_bottom = 151.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 100
+text = "Collections"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -879.0
+offset_top = -224.0
+offset_right = 118.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.76, 1.76)
+theme_override_constants/separation = 100
+
+[node name="stage_1" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlg6h")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 45
+text = "InTense Island"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 31
+text = "Simple Tenses of Verb"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 25
+text = "(Present, Past, Future)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -107.405
+offset_right = 15.0
+offset_bottom = -4.405
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.68, 1.68)
+texture_normal = ExtResource("5_jh8mb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="view" type="Button" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.5
+offset_top = -77.0
+offset_right = 95.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxFlat_m1sri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_51tah")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hqx5s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nl7oe")
+text = "View"
+
+[node name="stage_2" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlg6h")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 45
+text = "Affrost Land"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 31
+text = "Morphology
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 25
+text = "(Rootword, Prefix, Suffix)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -107.405
+offset_right = 15.0
+offset_bottom = -4.405
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.68, 1.68)
+texture_normal = ExtResource("5_jh8mb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="view" type="Button" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.5
+offset_top = -77.0
+offset_right = 95.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxFlat_m1sri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_51tah")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hqx5s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nl7oe")
+text = "View"
+
+[node name="stage_3" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dlg6h")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 45
+text = "Land of Nymsand"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 31
+text = "Vocabulary"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 25
+text = "(Synonym, Antonym)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -107.405
+offset_right = 15.0
+offset_bottom = -4.405
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.68, 1.68)
+texture_normal = ExtResource("5_jh8mb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="view" type="Button" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.5
+offset_top = -77.0
+offset_right = 95.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("4_16hih")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxFlat_m1sri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_51tah")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hqx5s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nl7oe")
+text = "View"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/stage_1/view" to="." method="_on_verb_view_pressed"]
+[connection signal="pressed" from="HBoxContainer/stage_2/view" to="." method="_on_morphology_view_pressed"]
+[connection signal="pressed" from="HBoxContainer/stage_3/view" to="." method="_on_vocabulary_view_pressed"]

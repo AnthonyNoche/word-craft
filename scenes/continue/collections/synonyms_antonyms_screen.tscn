@@ -1,0 +1,327 @@
+[gd_scene load_steps=15 format=3 uid="uid://bic27stygrae0"]
+
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="1_ojnq0"]
+[ext_resource type="Script" uid="uid://cdqnp5iwrmvgu" path="res://scripts/synonyms_antonyms_script.gd" id="1_tv8lx"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_tv8lx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vqys"]
+bg_color = Color(0, 0.290196, 0.678431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgouh"]
+bg_color = Color(1, 0.87451, 0.384314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 4.0
+
+[sub_resource type="Theme" id="Theme_7vqys"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_jgouh")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_jgouh")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_jgouh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tv8lx"]
+bg_color = Color(0.6, 0.67451, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr1et"]
+bg_color = Color(0.890196, 0.909804, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahhfj"]
+bg_color = Color(0, 0.321569, 0.8, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43vbr"]
+bg_color = Color(0.826304, 0.740348, 0.0238093, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pllu6"]
+bg_color = Color(0.615919, 0.550575, 0.0151985, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3583y"]
+bg_color = Color(0.939166, 0.842996, 0.0677563, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_tv8lx"]
+Button/constants/outline_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwjtr"]
+bg_color = Color(0.0130305, 0.45632, 0.721908, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+anti_aliasing_size = 0.01
+
+[node name="SynonymsAntonymsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("1_tv8lx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vqys")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -494.0
+offset_right = 21.0
+offset_bottom = 80.0
+grow_horizontal = 2
+scale = Vector2(1.97, 1.97)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 45
+text = "Synonyms and Antonyms"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_tv8lx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 160.0
+offset_right = 1936.0
+offset_bottom = 984.0
+theme = SubResource("Theme_7vqys")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 13
+
+[node name="word" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tv8lx")
+text = "Collected Word"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tv8lx")
+text = "Synonym"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tv8lx")
+text = "Antonym"
+
+[node name="word1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xr1et")
+text = "Happy"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xr1et")
+text = "Joyful"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xr1et")
+text = "Sad"
+
+[node name="DefinitionPopup" type="PopupPanel" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(1225, 750)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ahhfj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DefinitionPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1221.0
+offset_bottom = 746.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WordLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 100
+text = "word"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefinitionLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 50
+text = "definition"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 169
+
+[node name="CloseButton" type="Button" parent="DefinitionPopup/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_43vbr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pllu6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3583y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_43vbr")
+text = "         Close        "
+
+[node name="LeftButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0227642
+anchor_top = 0.466667
+anchor_right = 0.0227642
+anchor_bottom = 0.467
+offset_left = 264.0
+offset_top = -28.0003
+offset_right = 337.0
+offset_bottom = 50.6396
+grow_vertical = 2
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_tv8lx")
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mwjtr")
+text = "<"
+
+[node name="RightButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.951403
+anchor_top = 0.44347
+anchor_right = 0.951403
+anchor_bottom = 0.44347
+offset_left = -228.451
+offset_top = 137.052
+offset_right = -155.451
+offset_bottom = 216.053
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.14126
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_tv8lx")
+theme_override_fonts/font = ExtResource("1_ojnq0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mwjtr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mwjtr")
+text = "<
+"
+
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

@@ -1,0 +1,1142 @@
+[gd_scene load_steps=15 format=3 uid="uid://dxr8kknwsbq7r"]
+
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="1_0vaju"]
+[ext_resource type="Script" uid="uid://cq1ulftypbkdo" path="res://scripts/regular_verbs_script.gd" id="1_fw6pd"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_fw6pd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fw6pd"]
+bg_color = Color(0, 0.290196, 0.678431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgouh"]
+bg_color = Color(1, 0.87451, 0.384314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 4.0
+
+[sub_resource type="Theme" id="Theme_6ss54"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_jgouh")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_jgouh")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_jgouh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ss54"]
+bg_color = Color(0.6, 0.67451, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u77g4"]
+bg_color = Color(0.890196, 0.909804, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va8sb"]
+bg_color = Color(0, 0.321569, 0.8, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxn3i"]
+bg_color = Color(0.826304, 0.740348, 0.0238093, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4mlm"]
+bg_color = Color(0.615919, 0.550575, 0.0151985, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iraxi"]
+bg_color = Color(0.939166, 0.842996, 0.0677563, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_fw6pd"]
+Button/constants/outline_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kp35v"]
+bg_color = Color(0.0130305, 0.45632, 0.721908, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+anti_aliasing_size = 0.01
+
+[node name="RegularVrebsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fw6pd")
+
+[node name="bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fw6pd")
+
+[node name="Label2" type="Label" parent="bg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_right = 161.5
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 97
+text = "Rugular Verb"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="bg"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_fw6pd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="bg"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 136.0
+offset_right = 1834.0
+offset_bottom = 965.0
+theme = SubResource("Theme_6ss54")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="bg/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 13
+
+[node name="word" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Present" type="Button" parent="bg/ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ss54")
+text = "Present"
+
+[node name="Past" type="Button" parent="bg/ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ss54")
+text = "Past"
+
+[node name="Future" type="Button" parent="bg/ScrollContainer/VBoxContainer/word"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ss54")
+text = "Future"
+
+[node name="word1" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Walking"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Walked"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word1"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will walk"
+
+[node name="word2" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Visiting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Visited"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word2"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will visit"
+
+[node name="word3" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word3"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Playing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word3"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Played"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word3"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will play"
+
+[node name="word4" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word4"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Cleaning"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word4"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Cleaned"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word4"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will clean"
+
+[node name="word5" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word5"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Baking"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word5"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Baked"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word5"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will bake"
+
+[node name="word6" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word6"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Calling"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word6"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "called"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word6"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will call"
+
+[node name="word7" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word7"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Jumping"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word7"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Jumped"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word7"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will jump"
+
+[node name="word8" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word8"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "watching"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word8"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "watched"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word8"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will watch"
+
+[node name="word9" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word9"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Opening"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word9"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Opened"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word9"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will open"
+
+[node name="word10" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word10"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Talking"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word10"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Talked"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word10"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will talk"
+
+[node name="word11" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word11"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Listening"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word11"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Listened"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word11"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will listen"
+
+[node name="word12" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word12"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Climbing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word12"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Climbed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word12"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will climb"
+
+[node name="word13" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word13"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Helping"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word13"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Helped"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word13"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will help"
+
+[node name="word14" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word14"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Brushing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word14"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Brushed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word14"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will brush"
+
+[node name="word15" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word15"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Starting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word15"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Starting"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word15"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will start"
+
+[node name="word16" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word16"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Pushing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word16"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Push"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word16"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will push"
+
+[node name="word17" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word17"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Painting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word17"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Painted"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word17"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will paint"
+
+[node name="word18" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word18"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Laughing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word18"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Laughed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word18"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will laugh"
+
+[node name="word19" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word19"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Counting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word19"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Counted"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word19"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will count"
+
+[node name="word20" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word20"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Pulling"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word20"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Pulled"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word20"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will pull"
+
+[node name="word21" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word21"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Fixing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word21"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Fixed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word21"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will fix"
+
+[node name="word22" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word22"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Planting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word22"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "palnted"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word22"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will plant"
+
+[node name="word23" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word23"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Shouting"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word23"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Shouted"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word23"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will shout"
+
+[node name="word24" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word24"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Borrowing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word24"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Borrowed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word24"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will borrow"
+
+[node name="word25" type="HBoxContainer" parent="bg/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Button" type="Button" parent="bg/ScrollContainer/VBoxContainer/word25"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Closing"
+
+[node name="Button2" type="Button" parent="bg/ScrollContainer/VBoxContainer/word25"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Closed"
+
+[node name="Button3" type="Button" parent="bg/ScrollContainer/VBoxContainer/word25"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u77g4")
+text = "Will close"
+
+[node name="DefinitionPopup" type="PopupPanel" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(1225, 750)
+theme_override_styles/panel = SubResource("StyleBoxFlat_va8sb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DefinitionPopup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1221.0
+offset_bottom = 746.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WordLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 100
+text = "word"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefinitionLabel" type="Label" parent="DefinitionPopup/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 50
+text = "definition"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 169
+
+[node name="CloseButton" type="Button" parent="DefinitionPopup/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_mxn3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m4mlm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iraxi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mxn3i")
+text = "         Close        "
+
+[node name="LeftButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0227642
+anchor_top = 0.466667
+anchor_right = 0.0227642
+anchor_bottom = 0.467
+offset_left = 264.0
+offset_top = -28.0003
+offset_right = 337.0
+offset_bottom = 50.6396
+grow_vertical = 2
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_fw6pd")
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kp35v")
+text = "<"
+
+[node name="RightButton" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.951403
+anchor_top = 0.44347
+anchor_right = 0.951403
+anchor_bottom = 0.44347
+offset_left = -228.451
+offset_top = 137.052
+offset_right = -155.451
+offset_bottom = 216.053
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 3.14126
+scale = Vector2(1.675, 1.675)
+theme = SubResource("Theme_fw6pd")
+theme_override_fonts/font = ExtResource("1_0vaju")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kp35v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kp35v")
+text = "<
+"
+
+[connection signal="pressed" from="bg/TextureButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

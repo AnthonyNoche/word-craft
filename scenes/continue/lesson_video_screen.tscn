@@ -1,0 +1,310 @@
+[gd_scene load_steps=7 format=3 uid="uid://1nij3w18bedx"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_3wxia"]
+[ext_resource type="Script" uid="uid://cyp87h0g5xmkm" path="res://scripts/lesson_video_script.gd" id="1_6cgcc"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="2_6cgcc"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="4_oit3x"]
+[ext_resource type="Texture2D" uid="uid://c5rshtmr0njcn" path="res://images/playButton.png" id="5_3wxia"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoib"]
+bg_color = Color(0, 0.290196, 0.678431, 0.596078)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 16
+
+[node name="LessonVideoScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6cgcc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3wxia")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 281.0
+offset_right = 954.0
+offset_bottom = 463.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("2_6cgcc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.0
+offset_right = 321.0
+offset_bottom = 151.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 100
+text = "Lesson Video"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -797.0
+offset_top = -233.0
+offset_right = 112.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.76, 1.76)
+theme_override_constants/separation = 100
+
+[node name="stage_1" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfoib")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 45
+text = "Stage 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 31
+text = "Simple Tenses of Verb"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 25
+text = "(Present, Past, Future)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -51.5
+offset_right = 58.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3wxia")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="stage_2" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfoib")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 45
+text = "Stage 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 31
+text = "Morphology
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 25
+text = "(Rootword, Prefix, Suffix)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -51.5
+offset_right = 58.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3wxia")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="stage_3" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfoib")
+
+[node name="Label" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.0
+offset_top = -58.0
+offset_right = 102.0
+offset_bottom = 5.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 45
+text = "Stage 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 265.0
+offset_right = 159.5
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 31
+text = "Vocabulary"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 295.0
+offset_right = 160.5
+offset_bottom = 358.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_oit3x")
+theme_override_font_sizes/font_size = 25
+text = "(Synonym, Antonym)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/stage_3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -51.5
+offset_right = 58.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3wxia")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_button_pressed"]

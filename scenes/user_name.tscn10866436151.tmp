@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0fqe1udv3wk5"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_5788l"]
+[ext_resource type="Script" uid="uid://b0pwvpurhtxpn" path="res://scripts/user_name_script.gd" id="1_d355k"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="3_womcu"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="4_fvvit"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="5_w3awt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_im7fk"]
+bg_color = Color(0, 0.290196, 0.678431, 0.333333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_d355k"]
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/constants/outline_size = 10
+LineEdit/font_sizes/font_size = 22
+LineEdit/fonts/font = ExtResource("3_womcu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6tep"]
+bg_color = Color(0.877616, 0.877616, 0.877616, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 14
+shadow_offset = Vector2(12.915, 12.915)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn72v"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 14
+shadow_offset = Vector2(12.915, 12.915)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d355k"]
+bg_color = Color(0.988235, 0.890196, 0.14902, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5.57, 6.55)
+
+[node name="UserName" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d355k")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(573.5, 324)
+scale = Vector2(0.925481, 0.922365)
+texture = ExtResource("1_5788l")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -230.0
+offset_right = 427.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_im7fk")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 462.0
+offset_bottom = 138.0
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 53
+text = "Enter Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="userName" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -321.0
+offset_top = -18.59
+offset_right = 321.0
+offset_bottom = 101.41
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_d355k")
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_f6tep")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bn72v")
+emoji_menu_enabled = false
+
+[node name="Submit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = 45.0
+offset_right = 133.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_d355k")
+text = "Submit"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 177.0
+offset_bottom = 65.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("4_fvvit")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_w3awt")
+
+[connection signal="button_down" from="Panel/Submit" to="." method="_on_submit_button_down"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,214 @@
+[gd_scene load_steps=14 format=3 uid="uid://c0fqe1udv3wk5"]
+
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="1_5788l"]
+[ext_resource type="Script" uid="uid://b0pwvpurhtxpn" path="res://scripts/user_name_script.gd" id="1_d355k"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="3_womcu"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="4_fvvit"]
+[ext_resource type="Script" uid="uid://casv88qc6bvtw" path="res://scripts/settings_script.gd" id="5_w3awt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_im7fk"]
+bg_color = Color(0, 0.290196, 0.678431, 0.333333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_d355k"]
+LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/constants/outline_size = 10
+LineEdit/font_sizes/font_size = 22
+LineEdit/fonts/font = ExtResource("3_womcu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6tep"]
+bg_color = Color(0.877616, 0.877616, 0.877616, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 14
+shadow_offset = Vector2(12.915, 12.915)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn72v"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 14
+shadow_offset = Vector2(12.915, 12.915)
+
+[sub_resource type="Theme" id="Theme_womcu"]
+Label/colors/font_color = Color(0.781995, 0, 0.166502, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d355k"]
+bg_color = Color(0.901551, 0.808489, 0.04066, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5.57, 6.55)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_womcu"]
+bg_color = Color(0.629323, 0.562665, 0.015681, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5.57, 6.55)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvvit"]
+bg_color = Color(0.996827, 0.928119, 0.471187, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_offset = Vector2(5.57, 6.55)
+anti_aliasing = false
+
+[node name="UserName" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d355k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5788l")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.0
+offset_top = -250.0
+offset_right = 337.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_im7fk")
+
+[node name="Label" type="Label" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_right = 462.0
+offset_bottom = 138.0
+scale = Vector2(0.83, 0.83)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 53
+text = "Enter Username"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="userName" type="LineEdit" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -281.217
+offset_top = -29.8072
+offset_right = 360.783
+offset_bottom = 90.1927
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.83, 0.83)
+theme = SubResource("Theme_d355k")
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_f6tep")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bn72v")
+emoji_menu_enabled = false
+
+[node name="error_label" type="Label" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.308
+offset_top = -285.154
+offset_right = 338.692
+offset_bottom = -163.154
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.83, 0.83)
+theme = SubResource("Theme_womcu")
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 53
+vertical_alignment = 1
+
+[node name="Submit" type="Button" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453522
+anchor_top = 0.963687
+anchor_right = 0.453522
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = 45.0
+offset_right = 133.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.3, 1.3)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("3_womcu")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/focus = SubResource("StyleBoxFlat_d355k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_womcu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fvvit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d355k")
+text = "Submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("4_fvvit")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_w3awt")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="TextureRect/Panel/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_back_button_pressed"]

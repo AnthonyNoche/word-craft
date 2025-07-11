@@ -1,0 +1,306 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0dkadnvxwrby"]
+
+[ext_resource type="Script" uid="uid://dw5bnbkthbg7p" path="res://scripts/about_screen.gd" id="1_iy10d"]
+[ext_resource type="Texture2D" uid="uid://c20l5jyynnswg" path="res://images/bg.png" id="2_ph83a"]
+[ext_resource type="Texture2D" uid="uid://drkb2elmvo4lg" path="res://images/back.png" id="3_mcmcj"]
+[ext_resource type="FontFile" uid="uid://d1754pjycomon" path="res://font/BalooBhaijaan-Regular.ttf" id="4_edvut"]
+[ext_resource type="Texture2D" uid="uid://drn38mkdljthk" path="res://images/devs/lou.png" id="5_em5s3"]
+[ext_resource type="Texture2D" uid="uid://ct14oe1hdqapc" path="res://images/devs/andal.png" id="6_e0xe5"]
+[ext_resource type="Texture2D" uid="uid://bqr83lumroufe" path="res://images/devs/Noche.png" id="7_vqrvg"]
+[ext_resource type="Texture2D" uid="uid://dy28hcx72ps86" path="res://images/devs/chauncey.png" id="8_t0v7c"]
+
+[sub_resource type="Theme" id="Theme_6sknk"]
+Label/constants/outline_size = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxvgv"]
+bg_color = Color(0, 0.290196, 0.678431, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+shadow_color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="Theme" id="Theme_25n47"]
+Label/font_sizes/font_size = 23
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iy10d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ph83a")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 142.0
+scale = Vector2(0.993357, 1.01468)
+texture_normal = ExtResource("3_mcmcj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.5
+offset_right = 254.5
+offset_bottom = 209.0
+grow_horizontal = 2
+theme = SubResource("Theme_6sknk")
+theme_override_fonts/font = ExtResource("4_edvut")
+theme_override_font_sizes/font_size = 138
+text = "About"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -513.0
+offset_top = -239.5
+offset_right = 513.0
+offset_bottom = 239.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.685, 1.685)
+pivot_offset = Vector2(500, 139.475)
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxvgv")
+
+[node name="about" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -469.0
+offset_top = 31.0
+offset_right = 473.0
+offset_bottom = 150.0
+grow_horizontal = 2
+scale = Vector2(1.01, 1.01)
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "Word Craft is a fun learning game for Grade 6 students. It helps you practice important English key concepts like verbs, tenses, morphology, and vocabulary through exciting challenges."
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Developers_" type="Label" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -81.5
+offset_right = 81.0
+offset_bottom = -38.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01, 1.01)
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "Developers:"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Panel"]
+position = Vector2(68, 233)
+scale = Vector2(1.01, 1.01)
+fit_margin = 0.0
+
+[node name="lou" type="Panel" parent="Panel/CanvasGroup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.9811
+offset_top = -17.2262
+offset_right = 192.981
+offset_bottom = 150.774
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxvgv")
+
+[node name="Lou" type="Sprite2D" parent="Panel/CanvasGroup/lou"]
+position = Vector2(85, 86)
+scale = Vector2(0.235522, 0.235522)
+texture = ExtResource("5_em5s3")
+
+[node name="name" type="Label" parent="Panel/CanvasGroup/lou"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0302
+offset_top = -3.05701
+offset_right = 97.9698
+offset_bottom = 74.943
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "Mark Lourence M. Panaligan"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="andal" type="Panel" parent="Panel/CanvasGroup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 245.0
+offset_top = -17.0
+offset_right = 423.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxvgv")
+
+[node name="andal" type="Sprite2D" parent="Panel/CanvasGroup/andal"]
+position = Vector2(86, 85)
+scale = Vector2(0.245087, 0.245087)
+texture = ExtResource("6_e0xe5")
+
+[node name="name" type="Label" parent="Panel/CanvasGroup/andal"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0302
+offset_top = -3.05701
+offset_right = 97.9698
+offset_bottom = 74.943
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "John Mari Zcedrich Z. Andal"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="noche" type="Panel" parent="Panel/CanvasGroup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 485.388
+offset_top = -18.2395
+offset_right = 663.568
+offset_bottom = 149.76
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxvgv")
+
+[node name="noche" type="Sprite2D" parent="Panel/CanvasGroup/noche"]
+position = Vector2(90, 83)
+scale = Vector2(0.237364, 0.237364)
+texture = ExtResource("7_vqrvg")
+
+[node name="name" type="Label" parent="Panel/CanvasGroup/noche"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0302
+offset_top = -3.05701
+offset_right = 97.9698
+offset_bottom = 74.943
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "Mark Anthony D. Noche"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="chauncy" type="Panel" parent="Panel/CanvasGroup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 719.093
+offset_top = -15.1996
+offset_right = 897.273
+offset_bottom = 152.8
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxvgv")
+
+[node name="pogi" type="Sprite2D" parent="Panel/CanvasGroup/chauncy"]
+position = Vector2(90, 77)
+scale = Vector2(0.247168, 0.247168)
+texture = ExtResource("8_t0v7c")
+
+[node name="name" type="Label" parent="Panel/CanvasGroup/chauncy"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0302
+offset_top = -3.05701
+offset_right = 97.9698
+offset_bottom = 74.943
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_25n47")
+theme_override_fonts/font = ExtResource("4_edvut")
+text = "Chauncey Nowel P. Arnaldo"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_back_button_pressed"]
